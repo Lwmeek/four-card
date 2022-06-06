@@ -1,0 +1,68 @@
+/* Colors */
+
+:root {
+	--clr-red: hsl(0, 78%, 62%);
+	--clr-cyan: hsl(180, 62%, 55%);
+	--clr-orange: hsl(34, 97%, 64%);
+	--clr-blue: hsl(212, 86%, 64%);
+	--clr-vDark-blue: hsl(234, 12%, 34%);
+	--clr-grayish-blue: hsl(229, 6%, 66%);
+	--clr-vLight-gray: hsl(0, 0%, 98%);
+}
+
+/* Typography */
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6rem;
+	font-family: "Poppins", sans-serif;
+	background: var(--clr-vLight-gray);
+}
+
+/* General styles */
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+}
+.card {
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.267);
+	border-radius: 5px;
+}
+h1,
+h2,
+h3 {
+	color: var(--clr-vDark-blue);
+}
+p {
+	color: var(--clr-grayish-blue);
+}
+
+/* Header */
+
+.header {
+	text-align: center;
+}
+.header h2 {
+	font-weight: 200;
+}
+
+/* Content */
+
+.content-container h3 {
+	color: var(--clr-vDark-blue);
+}
+.supervisor {
+	border-top: 3px solid var(--clr-cyan);
+}
+.team {
+	border-top: 3px solid var(--clr-red);
+}
+.karma {
+	border-top: 3px solid var(--clr-orange);
+}
+.calculator {
+	border-top: 3px solid var(--clr-blue);
+}
