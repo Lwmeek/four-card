@@ -16,7 +16,7 @@ html {
 	font-size: 62.5%;
 }
 body {
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 	font-family: "Poppins", sans-serif;
 	background: var(--clr-vLight-gray);
 }
@@ -25,11 +25,16 @@ body {
 
 .container {
 	width: 85%;
-	margin: 0 auto;
+	margin: 5rem auto;
+	max-width: 35rem;
 }
 .card {
 	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.267);
 	border-radius: 5px;
+	margin-bottom: 2rem;
+	padding: 1rem 3rem;
+	display: flex;
+	flex-direction: column;
 }
 h1,
 h2,
@@ -38,6 +43,12 @@ h3 {
 }
 p {
 	color: var(--clr-grayish-blue);
+	line-height: 2.3rem;
+}
+img {
+	width: 4.5rem;
+	align-self: flex-end;
+	margin-bottom: 1.5rem;
 }
 
 /* Header */
@@ -45,14 +56,29 @@ p {
 .header {
 	text-align: center;
 }
+.header h1 {
+	margin: 0 0 2.5rem 0;
+	font-size: 2.3rem;
+}
 .header h2 {
 	font-weight: 200;
+	margin: 1rem 0;
+	font-size: 2.3rem;
+}
+.header p {
+	margin: 0 auto 6rem;
+	font-size: 1.5rem;
+	max-width: 55ch;
 }
 
 /* Content */
 
 .content-container h3 {
 	color: var(--clr-vDark-blue);
+	margin: 1.1em 0 0.6em;
+}
+.content-container p {
+	margin: 0 0 4rem;
 }
 .supervisor {
 	border-top: 3px solid var(--clr-cyan);
@@ -65,4 +91,31 @@ p {
 }
 .calculator {
 	border-top: 3px solid var(--clr-blue);
+}
+
+/* Screen Sizes */
+
+@media screen and (min-width: 950px) {
+	.container {
+		max-width: none;
+	}
+	.content-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 2rem;
+		max-width: 111rem;
+		margin: 0 auto;
+	}
+	.supervisor {
+		grid-row: 1 / span 2;
+		align-self: center;
+	}
+	.karma {
+		grid-area: 2/2;
+	}
+	.calculator {
+		grid-row: 1 / span 2;
+		align-self: center;
+	}
 }
